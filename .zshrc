@@ -54,3 +54,6 @@ alias groot="cd \$(git rev-parse --show-toplevel)"
 alias devstyle="dev style --include-branch-commits"
 alias devtest="dev test --include-branch-commits"
 alias devtc="dev tc --include-branch-commmits"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

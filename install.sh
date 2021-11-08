@@ -20,3 +20,4 @@ ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 
 # Update the zsh config
 ln -sf ~/dotfiles/.zshrc ~/.zshrc && . ~/.zshrc
+ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
