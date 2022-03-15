@@ -9,7 +9,6 @@ git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${Z
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install Packages
-sudo apt-get install autojump
 sudo apt-get install -y fzf
 
 # Install Yarn Packages
