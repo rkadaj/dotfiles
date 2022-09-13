@@ -63,3 +63,6 @@ if [ $SPIN ]; then
 
   PROMPT="😵‍💫 $PROMPT"
 fi
+
+#mcfly
+eval "$(mcfly init zsh)"
