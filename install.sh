@@ -10,6 +10,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~
 
 # Install Packages
 sudo apt-get install -y fzf
+sudo apt install kitty-terminfo
 
 # Install Yarn Packages
 yarn global add rebase-editor
