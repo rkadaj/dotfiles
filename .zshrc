@@ -62,7 +62,6 @@ if [ $SPIN ]; then
   alias sc="systemctl"
 
   PROMPT="😵‍💫 $PROMPT"
-fi
 
-#mcfly
-eval "$(mcfly init zsh)"
+  POWERLEVEL9K_INSTANT_PROMPT=off
+fi
