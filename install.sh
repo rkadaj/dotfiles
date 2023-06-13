@@ -1,23 +1,11 @@
 #!/bin/bash
 
-# Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo "Installing oh my zsh"
 
-# Install ohmyzsh custom plugins
-git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# Install Packages
-sudo apt-get install -y fzf
-sudo apt install kitty-terminfo
-
-# Install Yarn Packages
+echo "Installing rebase-editor"
 yarn global add rebase-editor
 
-# Update the git config
-ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
-
-# Update the zsh config
+echo "Updated .zshrc reference"
 ln -sf ~/dotfiles/.zshrc ~/.zshrc && . ~/.zshrc
-ln -sf ~/dotfiles/.p10k.zsh ~/.p10k.zsh
