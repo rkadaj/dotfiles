@@ -1,0 +1,18 @@
+[include]
+	path = ~/.config/dev/gitconfig
+	path = ~/.gitconfig.shopify
+	path = ~/.gitconfig.personal
+[push]
+	autoSetupRemote = true
+	autoSetupRemote = true
+[core]
+	untrackedcache = true
+[trim]
+	bases = main,master
+[init]
+	defaultBranch = main
+[rebase]
+	autosquash = true
+[diff]
+	colorMoved = dimmed-zebra
+	color-moved-ws = ignore-all-space
