@@ -21,6 +21,11 @@ if [ -f ~/dotfiles/setup ]; then
   ~/dotfiles/setup
 fi
 
+plugins=(
+  fzf
+  zsh-autosuggestions
+)
+
 eval "$(starship init zsh)"
 
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
@@ -38,4 +43,10 @@ if [ $SPIN ]; then
   alias sc="systemctl"
 fi
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+unamestr=$(uname)
+# if [[ "$unamestr" == 'Linux' ]]; then
+
+if [[ "$unamestr" == 'Darwin' ]]; then
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi

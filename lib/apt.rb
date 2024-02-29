@@ -33,6 +33,7 @@ class Apt < Base
     %w[
       fzf
       zsh
+      zsh-autosuggestions
     ]
   end
 

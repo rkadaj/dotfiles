@@ -59,6 +59,7 @@
     "mermaid"
   ],
   "mermaid.vscode.light": "dark",
-  "gitlens.rebaseEditor.ordering": "asc",
-  "workbench.panel.defaultLocation": "right"
+  "workbench.panel.defaultLocation": "right",
+  "workbench.editor.wrapTabs": "true",
+  "gitlens.rebaseEditor.ordering": "asc"
 }
