@@ -1,17 +1,15 @@
-# plugins=(
-#   autojump
-#   fzf
-#   git
-#   yarn
-#   history
-#   last-working-dir
-#   zsh-autosuggestions
-#   zsh-syntax-highlighting # Note: This plugin must be added last
-# )
-
 export HOMEBREW_NO_GOOGLE_ANALYTICS=true
 
 alias gg=lazygit
+
+# fpath=("${HOME}/.zsh/completions" $fpath)
+
+if [ -f ~/.antigen.zsh ]; then
+  source ~/.antigen.zsh
+  antigen init ~/.antigenrc
+fi
+
+PATH=$HOME/dotfiles/binaries:$PATH
 
 if command -v rbenv &> /dev/null; then
   eval "$(rbenv init - zsh)"
@@ -20,11 +18,6 @@ fi
 if [ -f ~/dotfiles/setup ]; then
   ~/dotfiles/setup
 fi
-
-plugins=(
-  fzf
-  zsh-autosuggestions
-)
 
 eval "$(starship init zsh)"
 
@@ -39,14 +32,5 @@ eval "$(atuin init zsh)"
 # fi
 
 if [ $SPIN ]; then
-  alias jc="journalctl"
-  alias sc="systemctl"
-fi
-
-
-unamestr=$(uname)
-# if [[ "$unamestr" == 'Linux' ]]; then
-
-if [[ "$unamestr" == 'Darwin' ]]; then
-  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  source /etc/zsh/zshrc.default.inc.zsh
 fi
