@@ -61,5 +61,6 @@
   "mermaid.vscode.light": "dark",
   "workbench.panel.defaultLocation": "right",
   "workbench.editor.wrapTabs": "true",
-  "gitlens.rebaseEditor.ordering": "asc"
+  "diffEditor.ignoreTrimWhitespace": false,
+  "github.copilot.editor.enableAutoCompletions": true
 }

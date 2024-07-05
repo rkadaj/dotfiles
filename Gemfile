@@ -11,6 +11,7 @@ group :development do
   gem "rubocop-sorbet", require: false
   gem "ruby-lsp", "~> 0.1.0", require: false
   gem "sorbet"
+  gem "sorbet-runtime"
   gem "tapioca", require: false
   gem "unparser", require: false
 end
