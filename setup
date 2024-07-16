@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 
 DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "${DIRECTORY}"
+
+bundle install
+
 exec ruby "${DIRECTORY}/lib/dotfiles.rb"
