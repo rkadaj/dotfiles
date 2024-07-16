@@ -33,4 +33,5 @@ eval "$(atuin init zsh)"
 
 if [ $SPIN ]; then
   source /etc/zsh/zshrc.default.inc.zsh
+  alias devr="dev reup && dev restart --procs"
 fi
