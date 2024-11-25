@@ -27,7 +27,7 @@ class VSCode < Base
   sig { returns(T::Array[String]) }
   def general_extensions
     [
-      "itarato.byesig", "Shopify.ruby-lsp", "sorbet.sorbet-vscode-extension", "wwm.better-align",
+      "itarato.byesig", "Shopify.ruby-lsp", "sorbet.sorbet-vscode-extension", "chouzz.vscode-better-align",
       "orepor.color-tabs-vscode-ext", "usernamehw.errorlens", "oderwat.indent-rainbow", "johnpapa.vscode-peacock",
       "Gruntfuggly.todo-tree", "redhat.vscode-yaml"
     ]
