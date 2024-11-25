@@ -5,7 +5,6 @@ class Git < Base
   extend T::Sig
 
   sig { override.void }
-  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def run
     debug("")
     debug("Setting up git config")
@@ -16,5 +15,4 @@ class Git < Base
 
     Link.new(source: "git/config.personal", target: "~/.gitconfig.personal").run
   end
-  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end

@@ -3,15 +3,15 @@
 
 class ExecuteFile < Base
     extend T::Sig
-  
+
     sig { params(url: String, executable: String).void }
     def initialize(url:, executable:)
       super()
-  
+
       @url = url
       @executable = executable
     end
-  
+
     sig { override.void }
     def run
       debug("Fetching url #{@url} to execute")
@@ -19,8 +19,7 @@ class ExecuteFile < Base
         debug("Executable #{@executable} exists, skipping")
         return
       end
-  
+
       `curl -fsSL #{@url} | sh -s -- -f`
     end
-  end
-  
+end

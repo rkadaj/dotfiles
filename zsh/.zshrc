@@ -24,8 +24,11 @@ eval "$(starship init zsh)"
 [[ -f /opt/dev/sh/chruby/chruby.sh ]] && { type chruby >/dev/null 2>&1 || chruby () { source /opt/dev/sh/chruby/chruby.sh; chruby "$@"; } }
 
 [[ -x /opt/homebrew/bin/brew ]] && eval $(/opt/homebrew/bin/brew shellenv)
-eval "$(atuin init zsh)"
 
+if [ -f ~/.atuin/bin/env ]; then
+  . "$HOME/.atuin/bin/env"
+  eval "$(atuin init zsh)"
+fi
 # to sync atuin
 # if command -v atuin &> /dev/null; then
 #   atuin sync
