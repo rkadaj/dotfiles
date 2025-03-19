@@ -36,5 +36,7 @@ fi
 
 if [ $SPIN ]; then
   source /etc/zsh/zshrc.default.inc.zsh
-  alias devr="dev reup && dev restart --procs"
+  alias devr="dev down && dev up && dev restart --procs"
 fi
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh

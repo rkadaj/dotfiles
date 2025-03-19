@@ -7,9 +7,12 @@ class VSCode < Base
     return unless macos?
 
     Link.new(source: "vscode/settings.json",
-             target: "~/Library/Application Support/Code/User/settings.json").run
+      target: "~/Library/Application Support/Code/User/settings.json").run
     Link.new(source: "vscode/keybindings.json",
-             target: "~/Library/Application Support/Code/User/keybindings.json").run
+      target: "~/Library/Application Support/Code/User/keybindings.json").run
+
+    Link.new(source: "vscode/settings.json",
+      target: "~/Library/Application Support/Cursor/User/settings.json").run if work?
 
     install_extensions(general_extensions)
     install_extensions(personal_extensions) if personal?
