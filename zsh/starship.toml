@@ -77,6 +77,7 @@ $os\
 $container\
 $shell\
 $character"""
+command_timeout = 1000
 
 [username]
 format = '[$user]($style) > '

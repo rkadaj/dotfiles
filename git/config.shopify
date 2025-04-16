@@ -1,7 +1,5 @@
 [user]
 	name = Robbie Khaddaj
 	email = robbie.khaddaj@shopify.com
-[credential]
-	helper = osxkeychain
 [maintenance]
 	repo = /Users/robbie/world/trees/root/src
